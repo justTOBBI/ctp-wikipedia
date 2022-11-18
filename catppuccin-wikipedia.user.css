@@ -303,7 +303,7 @@
 
     .mp-box,
     .plainlinks {
-        background-color: rgb($surface0) !important;
+        background-color: rgb($surface1) !important;
     }
 
     .tmbox,
@@ -447,5 +447,40 @@
         background-color: rgb($surface1) !important;
     }
 
+    .mw-message-box-warning {
+        background-color: rgb($yellow)
+    }
 
+    .mw-ui-checkbox [type="checkbox"]:enabled {
+        background-color: rgb($overlay0) !important;
+    }
+
+    table,
+    .wikitable,
+    th,
+    td {
+        background-color: rgb($surface0) !important;
+        color: rgb($subtext0) !important;
+    }
+
+    .mw-parser-output .navbox {
+        border: 1px solid rgb($surface1) !important;
+        border-spacing: 0px
+    }
+
+    .wikitable>tr>th,
+    .wikitable>tr>td,
+    .wikitable>*>tr>th,
+    .wikitable>*>tr>td {
+        background-color: rgb($surface0) !important;
+        color: rgb($subtext0) !important;
+    }
+
+    .mw-parser-output .portal-bar-bordered {
+        background-color: rgb($surface0) !important;
+    }
+
+    .mw-parser-output .ambox-content {
+        border-left: 10px solid rgb($peach) !important;
+    }
 }
