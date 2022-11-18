@@ -54,7 +54,7 @@
 
 ## 💝 Thanks to
 
-- [Human](https://github.com/catppuccin)
+- [justTOBBI](https://github.com/justTOBBI)
 
 &nbsp;
 
