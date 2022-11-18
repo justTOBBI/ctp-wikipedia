@@ -1,0 +1,451 @@
+/*==UserStyle==
+@name           Catppuccin Wikipedia
+@namespace      github.com/catppuccin/wikipedia
+@version        1.0.0
+@description    Soothing pastel theme for Wikipedia
+@author         Catppuccin
+@preprocessor   stylus
+@var select theme "Theme" ["Latte", "Frappe", "Macchiato", "Mocha*"]
+@var select accent-color "Accent" ["Rosewater*", "Flamingo", "Pink", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender", "Gray"]
+@var checkbox useAccentColor4Links "Use Accent Color for Links" 0
+==/UserStyle==*/
+
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("wikipedia.org") {
+
+    if (theme == "Latte") {
+        $rosewater =     222, 149, 132
+        $flamingo =      221, 120, 120
+        $pink =          236, 131, 208
+        $mauve =         136, 57, 239
+        $red =           210, 15, 57
+        $maroon =        230, 69, 83
+        $peach =         254, 100, 11
+        $yellow =        228, 147, 32
+        $green =         64, 160, 43
+        $teal =          23, 146, 153
+        $blue =          42, 110, 245
+        $sapphire =      32, 159, 181
+        $sky =           4, 165, 229
+        $lavender =      114, 135, 253
+        $text =          76, 79, 105
+        $subtext1 =      92, 95, 119
+        $subtext0 =      108, 111, 133
+        $overlay2 =      124, 127, 147
+        $overlay1 =      140, 143, 161
+        $overlay0 =      156, 160, 176
+        $surface2 =      172, 176, 190
+        $surface1 =      188, 192, 204
+        $surface0 =      204, 208, 218
+        $base =          239, 241, 245
+        $mantle =        230, 233, 239
+        $crust =         220, 224, 232
+      } else if (theme == "Frappe") {
+        $rosewater =     242, 213, 207
+        $flamingo =      238, 190, 190
+        $pink =          244, 184, 228
+        $mauve =         202, 158, 230
+        $red =           231, 130, 132
+        $maroon =        234, 153, 156
+        $peach =         239, 159, 118
+        $yellow =        229, 200, 144
+        $green =         166, 209, 137
+        $teal =          129, 200, 190
+        $blue =          140, 170, 238
+        $sapphire =      133, 193, 220
+        $sky =           153, 209, 219
+        $lavender =      186, 187, 241
+        $text =          198, 206, 239
+        $subtext1 =      181, 189, 220
+        $subtext0 =      165, 172, 201
+        $overlay2 =      148, 155, 183
+        $overlay1 =      131, 138, 164
+        $overlay0 =      115, 120, 145
+        $surface2 =      98, 103, 126
+        $surface1 =      81, 86, 108
+        $surface0 =      65, 69, 89
+        $base =          48, 52, 70
+        $mantle =        41, 44, 60
+        $crust =         35, 38, 52
+      } else if (theme == "Macchiato") {
+        $rosewater =     244, 219, 214
+        $flamingo =      240, 198, 198
+        $pink =          245, 189, 230
+        $mauve =         198, 160, 246
+        $red =           237, 135, 150
+        $maroon =        238, 153, 160
+        $peach =         245, 169, 127
+        $yellow =        238, 212, 159
+        $green =         166, 218, 149
+        $teal =          139, 213, 202
+        $blue =          138, 173, 244
+        $sapphire =      125, 196, 228
+        $sky =           145, 215, 227
+        $lavender =      183, 189, 248
+        $text =          197, 207, 245
+        $subtext1 =      179, 188, 224
+        $subtext0 =      161, 170, 203
+        $overlay2 =      143, 151, 183
+        $overlay1 =      124, 131, 162
+        $overlay0 =      108, 114, 141
+        $surface2 =      90, 95, 120
+        $surface1 =      72, 76, 100
+        $surface0 =      54, 58, 79
+        $base =          36, 39, 58
+        $mantle =        30, 32, 48
+        $crust =         24, 25, 38
+      } else if (theme == "Mocha") {
+        $rosewater =     245, 224, 220
+        $flamingo =      242, 205, 205
+        $pink =          245, 194, 231
+        $mauve =         203, 166, 247
+        $red =           243, 139, 168
+        $maroon =        235, 160, 172
+        $peach =         250, 179, 135
+        $yellow =        249, 226, 175
+        $green =         166, 227, 161
+        $teal =          148, 226, 213
+        $blue =          135, 176, 249
+        $sapphire =      116, 199, 236
+        $sky =           137, 220, 235
+        $lavender =      180, 190, 254
+        $text =          198, 208, 245
+        $subtext1 =      179, 188, 223
+        $subtext0 =      161, 168, 201
+        $overlay2 =      142, 149, 179
+        $overlay1 =      123, 129, 157
+        $overlay0 =      105, 109, 134
+        $surface2 =      86, 89, 112
+        $surface1 =      67, 70, 90
+        $surface0 =      49, 50, 68
+        $base =          30, 30, 46
+        $mantle =        24, 24, 37
+        $crust =         17, 17, 27
+      }
+
+    if (useAccentColor4Links) {
+        if (accent-color=="Rosewater") {
+            $accent-color =$rosewater
+        }
+
+        else if (accent-color=="Flamingo") {
+            $accent-color =$flamingo
+        }
+
+        else if (accent-color=="Pink") {
+            $accent-color =$pink
+        }
+
+        else if (accent-color=="Mauve") {
+            $accent-color =$mauve
+        }
+
+        else if (accent-color=="Red") {
+            $accent-color =$red
+        }
+
+        else if (accent-color=="Maroon") {
+            $accent-color =$maroon
+        }
+
+        else if (accent-color=="Peach") {
+            $accent-color =$peach
+        }
+
+        else if (accent-color=="Yellow") {
+            $accent-color =$yellow
+        }
+
+        else if (accent-color=="Green") {
+            $accent-color =$green
+        }
+
+        else if (accent-color=="Teal") {
+            $accent-color =$teal
+        }
+
+        else if (accent-color=="Blue") {
+            $accent-color =$blue
+        }
+
+        else if (accent-color=="Sapphire") {
+            $accent-color =$sapphire
+        }
+
+        else if (accent-color=="Sky") {
+            $accent-color =$sky
+        }
+
+        else if (accent-color=="Lavender") {
+            $accent-color =$lavender
+        }
+
+        else if (accent-color=="Gray") {
+            $accent-color =$subtext0
+        }
+    }
+
+    else {
+        $accent-color =$blue
+    }
+
+
+    body,
+    .mw-body {
+        background-color: rgb($base) !important;
+        color: rgb($text) !important;
+    }
+
+    .toc {
+        background-color: rgb($surface0) !important;
+    }
+
+    .tocnumber {
+        color: rgb($subtext0) !important;
+
+    }
+
+    a,
+    .toctogglelabel,
+    .wb-langlinks-link>a:link {
+        color: rgb($accent-color) !important;
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: rgb($subtext1) !important;
+    }
+
+    .infobox {
+        background-color: rgb($surface0) !important;
+        color: rgb($text) !important;
+    }
+
+    .thumbinner,
+    .thumb,
+    .toccolours,
+    .graytable {
+        background: rgb($surface0) !important;
+        border-color: rgb($overlay0) !important;
+    }
+
+    #mw-head {
+        background-color: rgb($surface0) !important;
+        color: rgb($text) !important;
+    }
+
+    .vector-user-menu-legacy #pt-anonuserpage,
+    .vector-user-menu-legacy #pt-tmpuserpage {
+        color: rgb($subtext1) !important;
+    }
+
+    .vector-menu-tabs,
+    .vector-menu-tabs a,
+    #mw-head .vector-menu-dropdown .vector-menu-heading {
+        background-color: rgb($surface1) !important;
+    }
+
+    button {
+        background-color: rgb($surface1) !important;
+        color: rgb($subtext0) !important;
+        border-color: rgb($overlay0) !important;
+    }
+
+    grid .uls-menu {
+        background-color: rgb($overlay0) !important;
+    }
+
+    .mw-parser-output .navbox-inner {
+        background-color: rgb($surface0) !important;
+        color: rgb($text) !important;
+    }
+
+    .navbox {
+        background: rgb($text) !important;
+    }
+
+    .navbox-title {
+        background-color: rgb($surface1) !important;
+    }
+
+    .navbox-group,
+    .navbox-list {
+        background-color: rgb($surface0) !important;
+    }
+
+    #footer-info li {
+        color: rgb($subtext0) !important;
+    }
+
+    .catlinks,
+    .mw-parser-output .side-box-right,
+    .mw-parser-output .portalborder>ul {
+        background-color: rgb($surface1) !important;
+        color: rgb($text) !important;
+        border-color: rgb($overlay0)
+    }
+
+    .vector-search-box-inner {
+        background-color: rgb($overlay0) !important;
+        color: rgb($text) !important;
+    }
+
+    .uls-settings-trigger {
+        background-color: rgb($base) !important;
+        border-color: rgb($base) !important;
+    }
+
+    .mp-box,
+    .plainlinks {
+        background-color: rgb($surface0) !important;
+    }
+
+    .tmbox,
+    .mp-toolbox,
+    .mp-toolbox-daily,
+    .mp-toolbox-daily>tr {
+        background-color: rgb($surface0) !important;
+        border-color: rgb($overlay0) !important;
+    }
+
+    #mp-bottom .mp-h2 {
+        background-color: rgb($overlay0) !important;
+    }
+
+    .mp-h2 {
+        color: rgb($mantle) !important;
+    }
+
+    input {
+        background-color: rgb($surface1) !important;
+        border-color: rgb($accent-color) !important;
+
+    }
+
+    .oo-ui-buttonElement-framed.oo-ui-widget-enabled>.oo-ui-buttonElement-button,
+    .mw-advancedSearch-fieldContainer .oo-ui-labelElement>.oo-ui-fieldsetLayout-header>.oo-ui-labelElement-label {
+        background-color: rgb($surface0) !important;
+        color: rgb($subtext0) !important;
+    }
+
+    .mw-advancedSearch-fieldContainer {
+        background: rgb($surface0) !important;
+    }
+
+    .oo-ui-tagMultiselectWidget.oo-ui-widget-enabled {
+        background-color: rgb($overlay0) !important;
+
+    }
+
+    .oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+        background-color: rgb($overlay0) !important;
+        color: rgb($subtext1) !important;
+    }
+
+    .oo-ui-tagMultiselectWidget-handle .oo-ui-tagMultiselectWidget-group>input {
+        color: rgb($red) !important;
+    }
+
+    .oo-ui-tagItemWidget.oo-ui-widget-enabled:not(.oo-ui-tagItemWidget-fixed) {
+        background-color: rgb($overlay0) !important;
+        color: rgb($text) !important;
+        border-color: rgb($accent-color) !important;
+    }
+
+    .oo-ui-menuSelectWidget.oo-ui-clippableElement-clippable {
+        background-color: rgb($overlay1) !important;
+
+    }
+
+    .oo-ui-menuOptionWidget.oo-ui-widget-enabled.oo-ui-optionWidget {
+        background-color: rgb($surface1) !important;
+        color: rgb($subtext0) !important;
+    }
+
+    .oo-ui-menuSectionOptionWidget {
+        background-color: rgb($surface0) !important;
+        color: rgb($text);
+    }
+
+    .app-badges .footer-sidebar-content {
+        background-color: rgb($overlay0) !important;
+        color: rgb($text) !important;
+    }
+
+    .footer-sidebar-text {
+        color: rgb($text) !important;
+    }
+
+    .other-project-tagline {
+        color: rgb($subtext0) !important;
+    }
+
+    .other-project-link:hover {
+        background-color: rgb($overlay0) !important;
+    }
+
+    .lang-list-button {
+        outline: 1.6rem solid rgb($surface0) !important;
+    }
+
+    .styled-select:hover {
+        background-color: rgb($overlay1) !important;
+    }
+
+    .lang-list-content,
+    .lang-list-active .lang-list-container {
+        background-color: rgb($surface0) !important;
+    }
+
+    .bookshelf .text {
+        background-color: rgb($surface1) !important;
+    }
+
+    .central-featured-lang .link-box:hover,
+    .central-featured-lang strong:hover,
+    .central-featured-lang bdi:hover,
+    .central-featured-lang small:hover,
+    .central-featured-lang span:hover {
+        background-color: rgb($overlay0) !important;
+    }
+
+    .site-license {
+        color: rgb($text) !important;
+    }
+
+    .suggestions-dropdown,
+    .talkheader-help {
+        background-color: rgb($surface0) !important;
+    }
+
+    .mw-ui-input,
+    .mw-ui-button {
+        color: rgb($text) !important;
+    }
+
+    .mw-parser-output .banner-shell-inner {
+        background-color: rgb($surface1);
+    }
+
+    .contentsPage--topic,
+    .contentsPage__title,
+    .module-shortcutboxplain {
+        background-color: rgb($surface1) !important;
+    }
+
+    .app-badge a {
+        color: #ff00 !important;
+    }
+
+    .suggestion-link:hover {
+        background-color: rgb($surface1) !important;
+    }
+
+
+}
